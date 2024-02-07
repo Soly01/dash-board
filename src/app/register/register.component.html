@@ -24,18 +24,50 @@
   </div>
 
   <div class="input p-3">
-    <input type="text" formControlName="username" placeholder="Username" />
-    <input
-      type="password"
-      formControlName="password"
-      placeholder="Enter Your Password"
-    />
-    <input
-      type="password"
-      formControlName="confirmPassword"
-      placeholder="Confirm Your Password"
-    />
-    <input type="email" formControlName="email" placeholder="Email" />
+    <span class="p-float-label p-2">
+      <input
+        formControlName="username"
+        id="float-input-username"
+        type="text"
+        size="50"
+        pInputText
+      />
+      <label for="float-input-username text-white-50">First Name</label>
+    </span>
+    <span class="p-float-label p-2">
+      <input
+        formControlName="password"
+        id="float-input-password"
+        type="password"
+        size="50"
+        pInputText
+      />
+
+      <label for="float-input-password text-white-50">Password</label>
+    </span>
+    <span class="p-float-label p-2">
+      <input
+        formControlName="confirmPassword"
+        id="float-input-confirmPassword"
+        type="password"
+        size="50"
+        pInputText
+      />
+
+      <label for="float-input-confirmPassword text-white-50"
+        >Confirm Password</label
+      >
+    </span>
+    <span class="p-float-label p-2">
+      <input
+        formControlName="email"
+        id="float-input-email"
+        type="text"
+        size="50"
+        pInputText
+      />
+      <label for="float-input-email text-white-50">Email</label>
+    </span>
   </div>
   <button
     pButton

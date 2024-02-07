@@ -2,7 +2,8 @@
   background-color: #424242;
   top: 50%;
   left: 50%;
-  height: 50%;
+  width: 30%;
+  height: 60%;
   transform: translate(-50%, -50%);
   border-radius: 10px;
 }
@@ -14,7 +15,16 @@ h1 {
   top: 10px;
   margin-bottom: 20px;
 }
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label {
+  top: 10px;
+}
 input {
+  color: white;
   margin-top: 10px;
   width: 100%;
   background-color: #424242;
@@ -30,6 +40,12 @@ input::placeholder {
   border: 1px solid #f97316;
   height: fit-content;
   margin-left: 10px;
+}
+@media (max-width: 1024px) {
+  .form {
+    width: 50%;
+    height: 60%;
+  }
 }
 @media (max-width: 768px) {
   .form {
