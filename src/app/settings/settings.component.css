@@ -1,0 +1,239 @@
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  width: 100%;
+  background-color: #303030 !important;
+  border-radius: 8px;
+  height: 100%;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+.p-card-header {
+  background-color: #555555;
+  padding: 30px;
+}
+.p-card {
+  border-radius: 10px;
+  background-color: #303030 !important;
+  max-width: 100%;
+  height: 100%;
+}
+.p-card .p-card-body {
+  background-color: #303030 !important;
+}
+.p-card-header {
+  background-color: #303030 !important;
+}
+.p-card .header .h1 {
+  color: white;
+}
+.p-card .header img {
+  width: 180px;
+  height: 120px;
+}
+.settings {
+  margin: auto;
+  max-width: 90%;
+}
+.p-inputswitch.p-inputswitch-checked .p-inputswitch-slider {
+  background-color: #f97316;
+  box-shadow: 0 0 0 0.2rem #f97316;
+}
+.p-inputswitch.p-focus .p-inputswitch-slider {
+  box-shadow: none;
+}
+.card .textarea {
+  background-color: #303030;
+}
+.card .textarea:hover {
+  border-color: #f97316;
+}
+.float-container {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+.p-inputtext:enabled:focus {
+  box-shadow: 0 0 0 0.2rem #f97316;
+  border-color: #f97316;
+}
+.float-container input {
+  background-color: #303030;
+  padding-bottom: 30px;
+  border-radius: 5px;
+}
+.p-float-label {
+  background-color: #303030;
+}
+.p-float-label input:focus ~ label,
+.p-float-label input.p-filled ~ label,
+.p-float-label textarea:focus ~ label,
+.p-float-label textarea.p-filled ~ label,
+.p-float-label .p-inputwrapper-focus ~ label,
+.p-float-label .p-inputwrapper-filled ~ label {
+  top: 10px;
+  left: 40px;
+}
+.float-container input:focus {
+  outline: none;
+  border: 2px solid #f97316; /* Set the default border color and width */
+  border-radius: 5px;
+  border-top: none;
+}
+.p-button {
+  border-radius: 5px;
+}
+.p-dialog .p-dialog-header,
+.p-dialog .p-dialog-content,
+.p-dialog .p-dialog-footer {
+  background-color: #303030 !important;
+}
+.p-button:hover {
+  color: black;
+}
+.p-card .p-card-footer {
+  display: flex;
+  justify-content: flex-end;
+}
+.card .textarea1 {
+  background-color: #555555;
+}
+.card .textarea1:hover {
+  border-color: #f97316;
+}
+.card .textarea1 i {
+  background-color: #303030;
+}
+.social input {
+  background-color: #555555;
+}
+.social i {
+  align-items: center;
+  color: #303030;
+  position: relative;
+  bottom: 45px;
+  left: 10%;
+  font-size: 30px;
+  transition: 0.5s;
+}
+.social .twitter i:hover {
+  color: #1da1f2 !important;
+}
+.social .facebook i:hover {
+  color: #1877f2 !important;
+}
+.social .youtube i:hover {
+  color: red !important;
+}
+.social .linkedin i:hover {
+  color: #0077b5 !important;
+}
+.p-checkbox .p-checkbox-box {
+  background-color: #303030;
+}
+.p-checkbox .p-checkbox-box.p-highlight {
+  background-color: #f44336 !important;
+  border-color: #f44336 !important;
+}
+.p-checkbox:not(.p-checkbox-disabled) .p-checkbox-box.p-highlight:hover {
+  background: #f44336 !important;
+}
+
+.field-checkbox {
+  align-items: center;
+}
+.field-checkbox label {
+  color: white;
+  font-size: 20px;
+  margin-left: 20px;
+  text-align: center;
+}
+
+.icons {
+  transition: 0.5s;
+}
+.icons i {
+  font-size: 25px;
+  margin-top: 20px;
+  transition: 0.5s;
+}
+.icons i span {
+  margin-left: 20px;
+}
+.icons:hover {
+  background-color: #d3d3d3;
+  color: #000;
+  border-radius: 7px;
+}
+.check {
+  background-color: #303030;
+  border: none;
+}
+.alert {
+  background-color: #303030;
+  color: white;
+  text-align: center;
+}
+@media (max-width: 1440px) {
+  .social i {
+    bottom: -22px;
+    left: -450px;
+  }
+}
+@media (max-width: 1024px) {
+  .social i {
+    bottom: 45px;
+    left: 10%;
+  }
+  .p-2 {
+    padding: 0 !important;
+  }
+  .d-grid {
+    padding: 0;
+  }
+  .card1 {
+    width: 90%;
+    margin-left: 30px;
+  }
+  .p-float-label input {
+    width: 100%;
+  }
+  .social input {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .card1 {
+    width: 90%;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 425px) {
+  .card1 {
+    width: 80%;
+    margin-left: 10px;
+  }
+  .p-float-label input {
+    width: 100%;
+  }
+  .social input {
+    width: 100%;
+  }
+}
+@media (max-width: 375px) {
+  .card1 {
+    width: 70%;
+  }
+}
+@media (max-width: 325px) {
+  .card1 {
+    width: 60%;
+  }
+}

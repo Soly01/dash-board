@@ -1,0 +1,208 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">Profile</h2>
+<div class="profile container align-self-center d-flex">
+  <div class="card1 level w-25 p-5">
+    <p-card>
+      <p-avatar
+        class="avatar position-relative"
+        [image]="
+          user?.image ||
+          'https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png'
+        "
+        styleClass="mr-2"
+        size="xlarge"
+        shape="circle"
+      ></p-avatar>
+      <label for="avatar" class="choose p-button mb-1"> Choose File </label>
+      <input
+        type="file"
+        id="avatar"
+        accept="image/*"
+        class="d-none"
+        (change)="onFileSelected($event)"
+      />
+
+      <div class="info d-flex justify-content-center">
+        <div class="text-white-50">
+          <p>
+            <span>Level 50</span>
+          </p>
+        </div>
+      </div>
+      <div class="card mb-2">
+        <p-progressBar [value]="90"></p-progressBar>
+      </div>
+      <div class="stars justify-content-center d-flex m-4">
+        <i class="star pi pi-star-fill"></i>
+        <i class="star pi pi-star-fill"></i>
+        <i class="star pi pi-star-fill"></i>
+        <i class="star pi pi-star-fill"></i>
+        <i class="star pi pi-star-fill"></i>
+      </div>
+      <span class="text-white-50 text-center d-flex justify-content-center"
+        >Raiting 1000</span
+      >
+    </p-card>
+  </div>
+  <div class="card1 pb-0 card w-100 me-3 p-4 information">
+    <h4 class="text-white-50 mb-4">General Information</h4>
+    <div class="info d-flex justify-content-between">
+      <p class="text-white-50">
+        Full Name
+        <span class="text-white">: Ahmed Soliman</span>
+      </p>
+      <p class="text-white-50">Gender <span class="text-white">: Male</span></p>
+      <p class="text-white-50">
+        Country
+        <span class="text-white">: Egypt</span>
+      </p>
+      <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+    </div>
+    <h4 class="text-white-50 mb-4">Personal Information</h4>
+    <div class="info d-flex justify-content-between">
+      <p class="text-white-50">
+        Email
+        <span class="text-white">: </span>
+      </p>
+      <p class="text-white-50">
+        Phone <span class="text-white">: 01280499585</span>
+      </p>
+      <p class="text-white-50">
+        Date Of Birth
+        <span class="text-white">: 27/9/2000</span>
+      </p>
+      <p-inputSwitch [(ngModel)]="checkedd"></p-inputSwitch>
+    </div>
+    <h4 class="text-white-50 mb-4">Job Information</h4>
+
+    <div class="info d-flex justify-content-between">
+      <p class="text-white-50">
+        Title
+        <span class="text-white">: Front End Developer</span>
+      </p>
+      <p class="text-white-50">
+        Programming Language <span class="text-white">: JavaScript</span>
+      </p>
+      <p class="text-white-50">
+        Years Of Experience
+        <span class="text-white">: 1+</span>
+      </p>
+      <p-inputSwitch [(ngModel)]="checkeddd"></p-inputSwitch>
+    </div>
+    <h4 class="text-white-50 mb-4">Billing Information</h4>
+
+    <div class="info d-flex justify-content-between">
+      <p class="text-white-50">
+        Payment Method
+        <span class="text-white">: Paypal</span>
+      </p>
+      <p class="text-white-50">Email <span class="text-white">:</span></p>
+      <p class="text-white-50">
+        Subscribtion
+        <span class="text-white">: Monthly</span>
+      </p>
+      <p-inputSwitch [(ngModel)]="checkedddd"></p-inputSwitch>
+    </div>
+  </div>
+</div>
+<div class="cont mb-5 d-flex">
+  <div class="skills d-flex card1">
+    <p-card>
+      <ng-template pTemplate="header">
+        <div class="d-flex header justify-content-between">
+          <p class="h1 fs-3 fw-bold">My Skills</p>
+          <span class="text-white-50">Complete Skill List </span>
+        </div>
+      </ng-template>
+      <div class="purple-tag mb-2 d-flex justify-content-between">
+        <p-tag class="p-2" value="HTML" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="CSS" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="JavaScript" [rounded]="true"></p-tag>
+      </div>
+      <div class="green-tag mb-2 d-flex justify-content-between">
+        <p-tag class="p-2" value="Typescript" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="Sass" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="Bootstrap" [rounded]="true"></p-tag>
+      </div>
+      <div class="red-tag mb-2 d-flex justify-content-between">
+        <p-tag class="p-2" value="Angular" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="Angular Material" [rounded]="true"></p-tag>
+        <p-tag class="p-2" value="Angular Routing" [rounded]="true"></p-tag>
+      </div>
+      <div class="mix-tag mb-2 d-flex justify-content-between">
+        <div class="purple">
+          <p-tag class="p-2" value="Angular" [rounded]="true"></p-tag>
+        </div>
+        <div class="green">
+          <p-tag class="p-2" value="Angular Material" [rounded]="true"></p-tag>
+        </div>
+        <div class="red">
+          <p-tag class="p-2" value="Angular Routing" [rounded]="true"></p-tag>
+        </div>
+      </div>
+    </p-card>
+  </div>
+  <div class="latest-activites card1 me-5">
+    <p-card class="card1">
+      <ng-template pTemplate="header">
+        <div class="d-flex header justify-content-between">
+          <p class="h1 fs-3 fw-bold">Latest Activities</p>
+          <span class="text-white-50">Latest Activities Done By The User </span>
+        </div>
+      </ng-template>
+      <div
+        class="act1 ms-3 mb-4 d-flex align-self-center justify-content-between"
+      >
+        <div class="info d-flex">
+          <img alt="Card" src="../../assets/images/activity-01.png" />
+          <div class="word align-self-center ps-3">
+            <p class="text-white">Store</p>
+            <span class="text-white-50">Bought The Master Python Course </span>
+          </div>
+        </div>
+        <div class="details d-flex flex-column justify-content-center">
+          <p class="text-white text-center">18:10</p>
+          <span class="text-white-50">Yesterday </span>
+        </div>
+      </div>
+      <div class="act2 ms-3 mb-4 d-flex justify-content-between">
+        <div class="info d-flex justify-content-center">
+          <img alt="Card" src="../../assets/images/activity-02.png" />
+          <div class="word align-self-center ps-3">
+            <p class="text-white">Academy</p>
+            <span class="text-white-50">Got The Angular Certificate </span>
+          </div>
+        </div>
+        <div class="details d-flex flex-column justify-content-center">
+          <span class="text-white text-center">16:10 </span>
+          <span class="text-white-50">Yesterday </span>
+        </div>
+      </div>
+      <div class="act3 ms-3 mb-4 d-flex justify-content-between">
+        <div class="info d-flex">
+          <img alt="Card" src="../../assets/images/activity-03.png" />
+          <div class="word align-self-center ps-3">
+            <p class="text-white">Badges</p>
+            <span class="text-white-50">Unlocked The 10 Skills Badge </span>
+          </div>
+        </div>
+        <div class="details d-flex flex-column justify-content-center">
+          <span class="text-white text-center">18:05 </span>
+          <span class="text-white-50">Yesterday </span>
+        </div>
+      </div>
+      <div class="act4 ms-3 d-flex justify-content-between">
+        <div class="info d-flex">
+          <img alt="Card" src="../../assets/images/activity-01.png" />
+          <div class="word align-self-center ps-3">
+            <p class="text-white">Store</p>
+            <span class="text-white-50">Bought The Master Python Course </span>
+          </div>
+        </div>
+        <div class="details d-flex flex-column justify-content-center">
+          <span class="text-white text-center">12:05 </span>
+          <span class="text-white-50">Yesterday </span>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>

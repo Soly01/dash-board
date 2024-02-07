@@ -10,8 +10,9 @@ h1 {
   color: white;
 }
 .login {
-  position: absolute;
+  position: relative;
   top: 10px;
+  margin-bottom: 20px;
 }
 input {
   margin-top: 10px;
@@ -22,4 +23,29 @@ input {
 }
 input::placeholder {
   color: #b8bebe;
+}
+.choose {
+  color: #ffffff;
+  background: #f97316;
+  border: 1px solid #f97316;
+  height: fit-content;
+  margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+  .input {
+    padding-top: 0 !important;
+  }
+}
+@media (max-width: 576px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .form {
+    width: 90%;
+  }
 }

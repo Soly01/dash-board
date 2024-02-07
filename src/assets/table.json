@@ -1,0 +1,70 @@
+[
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png"
+    ],
+    "name": "Ministry Wikibedia",
+    "finsihData": "10 May 2022",
+    "client": "Ministry",
+    "price": "5300$",
+    "status": "Pending",
+    "sevirety": "warning"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-04.png"
+    ],
+    "name": "Sameh Shop",
+    "finsihData": "12 Oct 2021    ",
+    "client": "Sameh's Company ",
+    "price": "1500$",
+    "status": "In Progress"
+  },
+  {
+    "team": ["../assets/images/team-02.png", "../assets/images/team-03.png"],
+    "name": "Bouba App",
+    "finsihData": "05 Sep 2021",
+    "client": "Bouba",
+    "price": "800$",
+    "status": "Completed",
+    "sevirety": "success"
+  },
+  {
+    "team": ["../assets/images/team-01.png", "../assets/images/team-02.png"],
+    "name": "Soly's App",
+    "finsihData": "27 Sep 2023",
+    "client": "Soly",
+    "price": "600$",
+    "status": "Completed",
+    "sevirety": "success"
+  },
+  {
+    "team": ["../assets/images/team-01.png", "../assets/images/team-02.png"],
+    "name": "Hello World",
+    "finsihData": "04 Oct 2022",
+    "client": "Mr.X",
+    "price": "600$",
+    "status": "Rejected",
+    "sevirety": "danger"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png",
+      "../assets/images/team-05.png"
+    ],
+    "name": "Fakebook",
+    "finsihData": "1 Jan 2022",
+    "client": "Meta",
+    "price": "2600$",
+    "status": "Completed",
+    "sevirety": "success"
+  }
+]

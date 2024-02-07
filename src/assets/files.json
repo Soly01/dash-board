@@ -1,0 +1,143 @@
+[
+  {
+    "pic": "../assets/images/pdf.svg",
+    "size": 15.1,
+    "uploaderName": "ahmed",
+    "name": "My File.pdf",
+    "date": "25/10/2020"
+  },
+  {
+    "pic": "../assets/images/avi.svg",
+    "size": 10,
+    "uploaderName": "sameh",
+    "name": "My File.avi",
+    "date": "25/5/1996"
+  },
+  {
+    "pic": "../assets/images/eps.svg",
+    "size": 13.666,
+    "uploaderName": "ahmed",
+    "name": "My File.eps",
+    "date": "2/02/2002"
+  },
+  {
+    "pic": "../assets/images/dll.svg",
+    "size": 2.2,
+    "uploaderName": "Coder",
+    "name": "My File.DLL",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/psd.svg",
+    "size": 15.1,
+    "uploaderName": "Sameh",
+    "name": "My-File.PSD",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/png.svg",
+    "size": 1.1,
+    "uploaderName": "Designer",
+    "name": "My-File.PNG",
+    "date": "25/5/2021"
+  },
+
+  {
+    "pic": "../assets/images/dll.svg",
+    "size": 2.2,
+    "uploaderName": "Coder",
+    "name": "My File.DLL",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/png.svg",
+    "size": 1.1,
+    "uploaderName": "Designer",
+    "name": "My-File.PNG",
+    "date": "25/5/2021"
+  },
+  {
+    "pic": "../assets/images/psd.svg",
+    "size": 15.1,
+    "uploaderName": "Sameh",
+    "name": "My-File.PSD",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/pdf.svg",
+    "size": 15.1,
+    "uploaderName": "ahmed",
+    "name": "My File.pdf",
+    "date": "25/10/2020"
+  },
+  {
+    "pic": "../assets/images/png.svg",
+    "size": 1.1,
+    "uploaderName": "Designer",
+    "name": "My-File.PNG",
+    "date": "25/5/2021"
+  },
+  {
+    "pic": "../assets/images/psd.svg",
+    "size": 15.1,
+    "uploaderName": "Sameh",
+    "name": "My-File.PSD",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/pdf.svg",
+    "size": 15.1,
+    "uploaderName": "ahmed",
+    "name": "My File.pdf",
+    "date": "25/10/2020"
+  },
+  {
+    "pic": "../assets/images/avi.svg",
+    "size": 10,
+    "uploaderName": "sameh",
+    "name": "My File.avi",
+    "date": "25/5/1996"
+  },
+  {
+    "pic": "../assets/images/eps.svg",
+    "size": 13.666,
+    "uploaderName": "ahmed",
+    "name": "My File.eps",
+    "date": "2/02/2002"
+  },
+  {
+    "pic": "../assets/images/dll.svg",
+    "size": 2.2,
+    "uploaderName": "Coder",
+    "name": "My File.DLL",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/png.svg",
+    "size": 1.1,
+    "uploaderName": "Designer",
+    "name": "My-File.PNG",
+    "date": "25/5/2021"
+  },
+  {
+    "pic": "../assets/images/dll.svg",
+    "size": 2.2,
+    "uploaderName": "Coder",
+    "name": "My File.DLL",
+    "date": "04/10/2021"
+  },
+  {
+    "pic": "../assets/images/png.svg",
+    "size": 1.1,
+    "uploaderName": "Designer",
+    "name": "My-File.PNG",
+    "date": "25/5/2021"
+  },
+  {
+    "pic": "../assets/images/psd.svg",
+    "size": 15.1,
+    "uploaderName": "Sameh",
+    "name": "My-File.PSD",
+    "date": "04/10/2021"
+  }
+]

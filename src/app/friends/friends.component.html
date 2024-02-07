@@ -1,0 +1,47 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">Friends</h2>
+<div class="cards container-fluid friends d-grid">
+  @for (friend of friends; track $index) {
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="icons text-white">
+        <i class="m-3 pi pi-phone"></i>
+        <i class="pi pi-comment"></i>
+      </div>
+      <div
+        class="d-flex header position-relative justify-content-center align-items-center"
+      >
+        <img class="img-fluid mb-4 friend" alt="Card" src="{{ friend.img }}" />
+      </div>
+    </ng-template>
+    <div
+      class="info d-flex justify-content-center flex-column align-items-center"
+    >
+      <p class="text-white">{{ friend.p }}</p>
+      <span class="text-white-50 pb-4 text-center">{{ friend.span }} </span>
+    </div>
+    <div class="stats">
+      <div class="i text-white d-flex flex-column">
+        <i class="p-2 mb-1 pi pi-user"> {{ friend.friends }} Friends</i>
+        <i class="p-2 mb-1 pi pi-code"> {{ friend.projects }} Projects</i>
+        <i class="p-2 mb-1 pi pi-briefcase"> {{ friend.articals }} Articals</i>
+      </div>
+
+      <span class="{{ friend.calss }}"> VIP</span>
+    </div>
+    <div class="foot d-flex justify-content-between pt-3">
+      <div class="join">
+        <span class="text-white-50"> {{ friend.date }} </span>
+      </div>
+      <div class="button">
+        <p-button
+          (click)="toProfile()"
+          label="Pofile"
+          severity="success"
+        ></p-button>
+        <p-button label="Remove" severity="danger"></p-button>
+      </div>
+    </div>
+  </p-card>
+
+  }
+</div>

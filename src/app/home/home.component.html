@@ -1,0 +1,582 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">DashBoard</h2>
+<div class="dashboard d-grid">
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex header justify-content-between">
+        <p class="h1 fs-3 fw-bold">Welcome</p>
+        <img alt="Card" src="../../assets/images/welcome.png" />
+      </div>
+    </ng-template>
+    <p-avatar
+      class="avatar position-relative"
+      [image]="user?.image || 'default-avatar-url.jpg'"
+      styleClass="mr-2"
+      size="large"
+      shape="circle"
+    ></p-avatar>
+    <div class="info m-5 p-4">
+      <div class="name d-flex">
+        <p>
+          <span class="w-100">Ahmed Soliman</span>
+        </p>
+        <span class="text-white-50 text-center">Devoloper</span>
+      </div>
+      <div class="projects">
+        <p class="text-center">80</p>
+        <span class="text-white-50 text-center">Projects</span>
+      </div>
+      <div class="earned">
+        <p class="text-center">8500$</p>
+        <span class="text-white-50 text-center">Earned</span>
+      </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <p-button
+        (onClick)="profile()"
+        label="Profile"
+        [raised]="true"
+        severity="warning"
+      ></p-button>
+    </ng-template>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex draft flex-column justify-content-between">
+        <p class="h1 text-white fs-3 fw-bolder">Quick Draft</p>
+        <span class="text-white-50">write a draft for your ideas </span>
+      </div>
+    </ng-template>
+    <div class="card mb-5 flex justify-content-center">
+      <textarea
+        placeholder="Tilte"
+        rows="1"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="valuee"
+      ></textarea>
+    </div>
+    <div class="card flex justify-content-center">
+      <textarea
+        placeholder="Leave a Comment"
+        rows="7"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="value"
+      ></textarea>
+    </div>
+    <ng-template pTemplate="footer">
+      <div class="d-flex justify-content-between">
+        <p-button
+          (onClick)="draft()"
+          label="Draft"
+          [raised]="true"
+          severity="warning"
+        ></p-button>
+        <p-button
+          (click)="save()"
+          label="Save"
+          [raised]="true"
+          severity="warning"
+        ></p-button>
+      </div>
+    </ng-template>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex header flex-column justify-content-between">
+        <p class="h1 text-white fs-3 fw-bolder">Yearly Target</p>
+        <span class="text-white-50">Targets of the year </span>
+      </div>
+    </ng-template>
+    <div class="d-flex">
+      <div class="">
+        <i class="pi pi-dollar icon1 icon"></i>
+        <i class="pi pi-code icon2 icon"></i>
+        <i class="pi pi-user icon3 icon"></i>
+      </div>
+      <div class="data d-flex flex-column w-100">
+        <div class="data1 mt-4">
+          <span>Money</span>
+          <p>20,000$</p>
+          <div class="card">
+            <p-progressBar [value]="90"></p-progressBar>
+          </div>
+        </div>
+        <div class="data2 mt-5 mb-2">
+          <span>Projects </span>
+          <p>24</p>
+          <div class="card">
+            <p-progressBar [value]="30"></p-progressBar>
+          </div>
+        </div>
+        <div class="data3 mt-5">
+          <span>Team</span>
+          <p>12</p>
+          <div class="card">
+            <p-progressBar [value]="80"></p-progressBar>
+          </div>
+        </div>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex draft flex-column justify-content-between">
+        <p class="h1 text-white fs-3 fw-bolder">Tickets Statistics</p>
+        <span class="text-white-50">everything about support tickets </span>
+      </div>
+    </ng-template>
+    <div
+      class="body d-flex justify-content-center gap-4 mb-5 flex-lg-row flex-md-row flex-column align-items-center"
+    >
+      <div class="box d-flex flex-column gap-4">
+        <div
+          class="cont text-center gap-2 p-1 d-flex flex-column justify-content-center align-items-center"
+        >
+          <i class="justify pi pi-align-justify"></i>
+          <p>2500</p>
+          <span>total</span>
+        </div>
+        <div
+          class="cont text-center gap-2 p-1 d-flex flex-column justify-content-center align-items-center"
+        >
+          <i class="pending pi pi-spinner"></i>
+          <p>500</p>
+          <span>Pending</span>
+        </div>
+      </div>
+
+      <div class="box d-flex flex-column gap-4">
+        <div
+          class="cont text-center gap-2 p-1 d-flex flex-column justify-content-center align-items-center"
+        >
+          <i class="check pi pi-check-circle"></i>
+          <p>1900</p>
+          <span>Closed</span>
+        </div>
+        <div
+          class="cont text-center gap-2 p-1 d-flex flex-column justify-content-center align-items-center"
+        >
+          <i class="delete pi pi-delete-left"></i>
+          <p>100</p>
+          <span>Deleted</span>
+        </div>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="latest card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex text-white draft justify-content-between">
+        <p class="h1 fs-3 fw-bolder">Latest News</p>
+      </div>
+    </ng-template>
+
+    <div class="news1 mb-4 d-flex justify-content-evenly">
+      <img alt="Card" src="../../assets/images/news-01.png" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white">Created SASS Section</p>
+        <span class="text-white-50">New SASS Examples & Tutorials </span>
+      </div>
+      <span class="days">3 Days Ago </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-evenly">
+      <img alt="Card" src="../../assets/images/news-02.png" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white">Changed The Design</p>
+        <span class="text-white-50">A Brand New Website Design </span>
+      </div>
+      <span class="days">5 Days Ago </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-evenly">
+      <img alt="Card" src="../../assets/images/news-03.png" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white">Team Increased</p>
+        <span class="text-white-50">3 Developers Joined The Team </span>
+      </div>
+      <span class="days">7 Days Ago </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-evenly">
+      <img alt="Card" src="../../assets/images/news-04.png" />
+      <div class="content text-center wh">
+        <p class="text-white">Added Payment Gateaway</p>
+        <span class="text-white-50">Many New Payment Gateways Added </span>
+      </div>
+      <span class="days">9 Days Ago </span>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex text-white draft justify-content-between">
+        <p class="h1 fs-3 fw-bolder">Latest Tasks</p>
+      </div>
+    </ng-template>
+    <div class="box">
+      <div class="tasks-content d-flex flex-wrap me-5">
+        <p
+          [ngClass]="{ clicked: isClicked('button1') }"
+          class="w-100 fw-bolder text-white"
+        >
+          Record One New Video
+        </p>
+        <span
+          [ngClass]="{ clicked: isClicked('button1') }"
+          class="text-white-50"
+          >Record Python Create Exe Project
+        </span>
+
+        <i
+          [ngClass]="{ clicked: isClicked('button1') }"
+          (click)="onClick('button1')"
+          class="trash1 pi pi-trash"
+        ></i>
+      </div>
+    </div>
+    <div class="box">
+      <div class="tasks-content d-flex flex-wrap me-5">
+        <p
+          [ngClass]="{ clicked: isClicked('button2') }"
+          class="w-100 text-white"
+        >
+          Write Article
+        </p>
+        <span
+          [ngClass]="{ clicked: isClicked('button2') }"
+          class="text-white-50"
+          >Write Low Level Vs High Level Language
+        </span>
+        <i
+          [ngClass]="{ clicked: isClicked('button2') }"
+          (click)="onClick('button2')"
+          class="trash2 pi pi-trash"
+        ></i>
+      </div>
+    </div>
+    <div class="box">
+      <div class="tasks-content d-flex flex-wrap me-5">
+        <p
+          [ngClass]="{ clicked: isClicked('button3') }"
+          class="w-100 text-white"
+        >
+          Finish Project
+        </p>
+        <span
+          [ngClass]="{ clicked: isClicked('button3') }"
+          class="text-white-50"
+          >Publish Academy Programming Project
+        </span>
+        <i
+          [ngClass]="{ clicked: isClicked('button3') }"
+          (click)="onClick('button3')"
+          class="trash3 pi pi-trash"
+        ></i>
+      </div>
+    </div>
+    <div class="box">
+      <div
+        [ngClass]="{ clicked: isClicked('button4') }"
+        class="tasks-content d-flex flex-wrap me-5"
+      >
+        <p
+          [ngClass]="{ clicked: isClicked('button4') }"
+          class="w-100 text-white"
+        >
+          Attend The Meeting
+        </p>
+        <span
+          [ngClass]="{ clicked: isClicked('button4') }"
+          class="text-white-50"
+          >Atten The Project Business Meeting
+        </span>
+        <i
+          [ngClass]="{ clicked: isClicked('button4') }"
+          (click)="onClick('button4')"
+          class="trash4 pi pi-trash"
+        ></i>
+      </div>
+    </div>
+    <div class="box">
+      <div class="tasks-content d-flex flex-wrap me-5">
+        <p
+          [ngClass]="{ clicked: isClicked('button5') }"
+          class="w-100 text-white"
+        >
+          Finish The Lesson
+        </p>
+        <span
+          [ngClass]="{ clicked: isClicked('button5') }"
+          class="text-white-50"
+          >Finish Teaching Flex Box
+        </span>
+        <i
+          [ngClass]="{ clicked: isClicked('button5') }"
+          (click)="onClick('button5')"
+          class="trash5 pi pi-trash"
+        ></i>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Top Search Items</p>
+        <span class="text-white-50">Keyword</span>
+        <span class="text-white-50">Search Count </span>
+      </div>
+    </ng-template>
+
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Programming</p>
+      </div>
+      <span class="fs-6 days">220 </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Javascript</p>
+      </div>
+      <span class="fs-6 days">180 </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Php</p>
+      </div>
+      <span class="fs-6 days">160 </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Code</p>
+      </div>
+      <span class="fs-6 days">145 </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Design</p>
+      </div>
+      <span class="fs-6 days">110 </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <div class="content me-5 text-start wh">
+        <p class="text-white fs-6">Logic</p>
+      </div>
+      <span class="fs-6 days">95 </span>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Latest Upload</p>
+      </div>
+    </ng-template>
+
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/pdf.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-File.Pdf</p>
+        <span class="text-white-50">Ahmed </span>
+      </div>
+      <span class="text-white">2.9MB </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/avi.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-Vide-File.Avi</p>
+        <span class="text-white-50">Admin </span>
+      </div>
+      <span class="text-white">4.9mb </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/psd.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-Psd-File.Pdf</p>
+        <span class="text-white-50">Soly </span>
+      </div>
+      <span class="text-white">4.5mb </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/zip.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-Zip-File.Pdf</p>
+        <span class="text-white-50">User </span>
+      </div>
+      <span class="text-white">8.9mb </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/dll.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-DLL.Pdf</p>
+        <span class="text-white-50">Admin </span>
+      </div>
+      <span class="fs-6 text-white">7.9mb </span>
+    </div>
+    <div class="news1 mb-4 d-flex justify-content-between">
+      <img alt="Card" src="../../assets/images/eps.svg" />
+      <div class="content me-5 text-center wh">
+        <p class="text-white fs-6">My-Esp-File.Pdf</p>
+        <span class="text-white-50">Designer </span>
+      </div>
+      <span class="text-white fs-6">8.9mb </span>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Last Project Progress</p>
+      </div>
+    </ng-template>
+    <div class="container mt-5 position-relative">
+      <div class="box">
+        <span class="circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Got The Project</p>
+      </div>
+      <div class="box">
+        <span class="circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Started The Project</p>
+      </div>
+      <div class="box">
+        <span class="circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">The Project Is About To Finish</p>
+      </div>
+      <div class="box">
+        <span class="circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Test The Project</p>
+      </div>
+      <div class="box">
+        <span class="circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">
+          Finish The Project & Get The Money
+        </p>
+      </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <img class="project" alt="Card" src="../../assets/images/project.png" />
+    </ng-template>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Reminders</p>
+      </div>
+    </ng-template>
+    <div class="reminders-container">
+      <div class="box d-flex align-items-center mb-4">
+        <span class="blue-circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Got The Project</p>
+      </div>
+      <div class="box d-flex align-items-center mb-4">
+        <span class="green-circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Started The Project</p>
+      </div>
+      <div class="box d-flex align-items-center mb-4">
+        <span class="yellow-circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">The Project Is About To Finish</p>
+      </div>
+      <div class="box d-flex align-items-center mb-4">
+        <span class="red-circle pe-2"></span>
+        <p class="fs-6 mb-4 text text-white">Test The Project</p>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Latest Posts</p>
+      </div>
+    </ng-template>
+    <div class="d-flex">
+      <p-avatar
+        class="avatar-container position-relative"
+        [image]="
+          user?.image ||
+          'https://primefaces.org/cdn/primeng/images/demo/avatar/amyelsner.png'
+        "
+        styleClass="mr-2"
+        size="large"
+        shape="circle"
+      ></p-avatar>
+      <span class="text-white-50 avatar-span">About 5 Hrs Ago </span>
+    </div>
+    <p class="text-white fs-5">
+      Wake Up To Reality, Nothing Ever Goes As Planned In This Accursed World
+      The Longer You Live The More You Will Realize That The Only Things That
+      Truly Exist In This Reality Are Merely Pain, Suffering And Futility
+    </p>
+    <ng-template pTemplate="footer">
+      <div class="footer d-flex justify-content-between fs-6">
+        <div class="box text-start justify-content-start text-white-50">
+          <i class="pi pi-heart fs-6 m-1"></i>
+          <span class="text-white-50">2.5k</span>
+        </div>
+        <div class="box text-end W-50 justify-content-start text-white-50">
+          <i class="pi pi-comment fs-6 m-1"></i>
+          <span class="text-white-50">630</span>
+        </div>
+      </div>
+    </ng-template>
+  </p-card>
+  <p-card class="social card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Social Media Stats</p>
+      </div>
+    </ng-template>
+    <div class="box-twitter d-flex justify-content-between">
+      <i class="pi pi-twitter twitter-icon"></i>
+      <span class="twitter-span">90K Followers</span>
+      <p-button label="Follow" severity="info"></p-button>
+    </div>
+    <div class="box-facebook mt-4 d-flex justify-content-between">
+      <i class="pi pi-facebook facebook-icon"></i>
+      <span class="facebook-span">3M Followers</span>
+      <p-button label="Like"></p-button>
+    </div>
+    <div class="box-youtube mt-4 d-flex justify-content-between">
+      <i class="pi pi-youtube youtube-icon"></i>
+      <span class="youtube-span">1M Subscriber</span>
+      <p-button label="Subscribe" [rounded]="true" severity="danger"></p-button>
+    </div>
+    <div class="box-linked mt-4 d-flex justify-content-between">
+      <i class="pi pi-linkedin linked-icon"></i>
+      <span class="linked-span">70K Followers</span>
+      <p-button label="Follow"></p-button>
+    </div>
+  </p-card>
+</div>
+<div class="card card1 table-1 m-auto align-self-center">
+  <p-table
+    [value]="tables"
+    class="table-1"
+    [tableStyle]="{ 'min-width': '40rem' }"
+  >
+    <ng-template pTemplate="header" let-columns>
+      <tr>
+        <th pSortableColumn="name">Name</th>
+        <th pSortableColumn="finsihData">Finsih Date</th>
+        <th pSortableColumn="client">Client</th>
+        <th pSortableColumn="price">Price</th>
+        <th>Team</th>
+        <th>Status</th>
+      </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-table let-columns="columns">
+      <tr>
+        <td>{{ table.name }}</td>
+        <td>{{ table.finsihData }}</td>
+        <td>{{ table.client }}</td>
+        <td>{{ table.price }}</td>
+        <div class="image">
+          @for (image of table.team;track $index) {
+          <td><img alt="Card" src="{{ image }}" /></td>
+          }
+        </div>
+
+        <td>
+          <p-button
+            label="{{ table.status }}"
+            severity="{{ table.sevirety }}"
+          ></p-button>
+        </td>
+      </tr>
+    </ng-template>
+  </p-table>
+</div>

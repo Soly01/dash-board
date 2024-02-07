@@ -1,17 +1,42 @@
-import { Component } from '@angular/core';
-import { Navbar } from '../../../core/interface/navbar.interface';
+import { SidebarService } from './../../services/sidebar.service';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css',
+  styleUrls: ['./header.component.css'],
 })
-export class HeaderComponent {
-  items: Navbar[] = [
-    { label: 'Item 1', icon: 'pi pi-fw pi-home' },
-    { label: 'Item 2', icon: 'pi pi-fw pi-calendar' },
-    // Add more menu items as needed
-  ];
+export class HeaderComponent implements OnInit {
+  sidebarVisible1: boolean = false;
+  user: any;
 
-  activeItem: Navbar = this.items[0]; // Set the initial active item
+  constructor(private router: Router, public SidebarService: SidebarService) {}
+
+  ngOnInit() {
+    const isLogged = localStorage.getItem('isLogged');
+
+    if (isLogged) {
+      const loggedUsername = localStorage.getItem('loggedUsername');
+
+      if (loggedUsername) {
+        const myData = JSON.parse(localStorage.getItem('myData') || '[]');
+        this.user = myData.find((u: any) => u.username === loggedUsername);
+      }
+    }
+  }
+
+  logOut() {
+    localStorage.removeItem('isLogged');
+    localStorage.removeItem('loggedUsername');
+    this.router.navigate(['/login']);
+  }
+
+  profile() {
+    this.router.navigate(['/profile']);
+  }
+
+  sideBarOpen() {
+    this.SidebarService.sideBarOpen();
+  }
 }

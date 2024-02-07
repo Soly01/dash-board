@@ -1,0 +1,134 @@
+[
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png",
+      "../assets/images/team-05.png"
+    ],
+    "name": "Ahmed Dashboard",
+    "date": "15/10/2024",
+    "span": "Ahmed Dashboard Project Design And Programming And Hosting",
+    "money": "$2500",
+    "tags": ["Programming", "Design", "Hosting", "Marketing"],
+    "progress": 90,
+    "class": "purple-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png"
+    ],
+    "name": "Academy Portal",
+    "date": "15/5/2024",
+    "span": "Academy Portal Project Design And Programming And Hosting",
+    "money": "$1800",
+    "tags": ["Programming", "Design"],
+    "progress": 50,
+    "class": "green-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png"
+    ],
+    "name": "Chatting Application",
+    "date": "15/6/2024",
+    "span": "Chatting Application Project Design",
+    "money": "$950",
+    "tags": ["Design"],
+    "progress": 60,
+    "class": "red-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png"
+    ],
+    "name": "Sameh Dashboard",
+    "date": "15/10/2024",
+    "span": "Sameh Dashboard Project Design And Programming And Hosting",
+    "money": "$950",
+    "tags": ["Programming", "Design", "Hosting", "Marketing"],
+    "progress": 60,
+    "class": "green-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png"
+    ],
+    "name": "Ahmed Portal",
+    "date": "25/5/2022",
+    "span": "Ahmed Portal Project Design And Programmings",
+    "money": "$850",
+    "tags": ["Programming", "Design"],
+    "progress": 20,
+    "class": "green-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png"
+    ],
+    "name": "Mohamed Application",
+    "date": "25/5/2022",
+    "span": "Mohamed Application Project Design",
+    "money": "$950",
+    "tags": ["Design"],
+    "progress": 90,
+    "class": "red-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png"
+    ],
+    "name": "Mohamed Dashboard",
+    "date": "4/10/2022",
+    "span": "Mohamed Dashboard Project Design And Programming And Hosting",
+    "money": "$1950",
+    "tags": ["Programming", "Design", "Hosting", "Marketing"],
+    "progress": 30,
+    "class": "red-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png",
+      "../assets/images/team-04.png",
+      "../assets/images/team-05.png"
+    ],
+    "name": "Sameh Portal",
+    "date": "4/10/2022",
+    "span": "Sameh Portal Project Design And Programming",
+    "money": "$1650",
+    "tags": ["Programming", "Design"],
+    "progress": 70,
+    "class": "green-tag"
+  },
+  {
+    "team": [
+      "../assets/images/team-01.png",
+      "../assets/images/team-02.png",
+      "../assets/images/team-03.png"
+    ],
+    "name": "Ahmed Application",
+    "date": "4/10/2021",
+    "span": "Ahmed Application Project Design",
+    "money": "$900",
+    "tags": ["Design"],
+    "progress": 90,
+    "class": "purple-tag"
+  }
+]

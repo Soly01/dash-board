@@ -1,0 +1,47 @@
+.main::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 38px;
+  height: 3px;
+  bottom: 40px;
+}
+.draft {
+  background-color: #303030;
+  color: white;
+  display: flex;
+  flex-direction: row;
+  margin-left: 200px;
+}
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  width: 100%;
+  background-color: #303030;
+  border-radius: 8px;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+@media (max-width: 1024px) {
+  .draft {
+    margin-left: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .draft {
+    margin-left: 90px;
+  }
+}
+@media (max-width: 425px) {
+  .draft {
+    margin-left: 90px;
+    width: 100% !important;
+  }
+}
+@media (max-width: 375px) {
+  .draft {
+    margin-left: 80px;
+    width: 100% !important;
+  }
+}

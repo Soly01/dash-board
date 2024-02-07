@@ -1,0 +1,92 @@
+.p-sidebar {
+  background-color: #303030;
+}
+.name {
+  color: white;
+}
+.sidebar {
+  margin: 10px;
+  font-size: 20px;
+}
+
+.sidebar:hover {
+  color: #dc3545;
+}
+.sidebar a:hover {
+  color: #dc3545;
+}
+.sidebar a {
+  color: white;
+  text-decoration: none;
+}
+.sidebar a::selection {
+  background-color: white;
+  color: #303030;
+}
+.sidebar i {
+  color: #fd7e14;
+  margin-right: 10px;
+}
+.sidebar i:hover {
+  color: #dc3545;
+}
+.ball {
+  position: relative;
+  width: 15px;
+  height: 15px;
+  background-color: #fd7e14;
+  border-radius: 50%;
+  top: 35px;
+  left: calc(50% - 7.5px);
+}
+.ball::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background-color: #dc3545;
+  left: 20px;
+  top: 5px;
+}
+.ball::after {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 5px;
+  background-color: #dc3545;
+  right: 20px;
+  top: 5px;
+  content: "";
+}
+.isactive {
+  border-radius: 7px;
+  background-color: #fff;
+  color: #000 !important;
+  width: fit-content;
+  align-self: center;
+}
+.color {
+  color: #000 !important;
+}
+.color:hover {
+  color: #dc3545;
+}
+.isclicked {
+  background-color: white;
+}
+.isclicked i {
+  color: red;
+}
+.isclicked:hover {
+  color: red;
+}
+.settings {
+  width: fit-content;
+}
+@media (max-width: 1024px) {
+  .isactive {
+    padding: 10px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+  }
+}

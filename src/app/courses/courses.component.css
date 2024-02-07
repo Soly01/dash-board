@@ -1,0 +1,73 @@
+.main::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 38px;
+  height: 3px;
+  bottom: 40px;
+}
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: fit-content;
+}
+.project {
+  margin: auto;
+  max-width: 90%;
+}
+.cards .p-card {
+  border-radius: 10px;
+  background-color: #555555 !important;
+  max-width: 100%;
+  height: 100%;
+}
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  background-color: #555555 !important;
+  border-radius: 8px;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+.cards .card1 .header .team {
+  transition: 0.5s;
+  position: absolute;
+  width: 50px;
+  border-radius: 50%;
+  top: 20px;
+  left: 20px;
+  z-index: 1;
+}
+.card1 .header .course {
+  transition: 0.5s;
+}
+.user,
+.money {
+  transition: 0.5s;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.card1:hover .date {
+  background-color: #d3d3d3;
+  color: #000 !important;
+  font-weight: 600;
+}
+.card1:hover .info .p-button {
+  color: #000 !important;
+}
+.card1:hover .header .course {
+  filter: grayscale(100%);
+}
+.card1:hover .header .team {
+  transform: scale(1.5);
+}
+
+@media (max-width: 320px) {
+  .cards {
+    padding: 0 !important;
+    width: 95%;
+  }
+}

@@ -1,0 +1,149 @@
+.main::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 38px;
+  height: 3px;
+  bottom: 40px;
+}
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: fit-content;
+}
+.project {
+  margin: auto;
+  max-width: 90%;
+}
+.p-card {
+  border-radius: 10px;
+  background-color: #303030 !important;
+  max-width: 100%;
+  height: 100%;
+}
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  background-color: #303030;
+  border-radius: 8px;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+.p-card .header {
+  padding: 30px;
+  flex-direction: column;
+}
+.p-card .header .h1 {
+  color: white;
+}
+.p-card .header .head {
+  font-size: 13px !important;
+}
+.p-card .header .head .h1 {
+  font-size: 20px !important;
+}
+.cards {
+  margin-left: 50px;
+  width: fit-content;
+}
+.p-tag {
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 15px;
+}
+.purple-tag .p-tag {
+  background-color: #7b1fa2;
+}
+.green-tag .p-tag {
+  background-color: #69f0ae;
+  color: #000;
+}
+.red-tag .p-tag {
+  background-color: #f44336;
+  color: #fff;
+}
+.date {
+  transition: 0.5s;
+  height: fit-content;
+  border-radius: 5px;
+}
+
+.p-progressbar {
+  background-color: #3e6050;
+  height: 4px;
+}
+.p-progressbar-value {
+  background: #4caf50;
+}
+
+.p-progressbar-label {
+  color: #4caf50;
+}
+
+.progress {
+  width: 50%;
+  height: fit-content;
+}
+.span {
+  width: fit-content;
+  height: fit-content;
+}
+.card1:hover .p-tag,
+.card1:hover .date {
+  background-color: #d3d3d3;
+  color: #000;
+  font-weight: 900;
+}
+.images img {
+  transition: 0.5s;
+  border-radius: 50%;
+  width: 30px;
+}
+.card1:hover .images img {
+  border: 2px solid white;
+  transform: scale(1.5);
+}
+@media (max-width: 1024px) {
+  .cards {
+    margin: auto;
+  }
+}
+@media (max-width: 576px) {
+  .project {
+    margin-left: 0;
+  }
+}
+@media (max-width: 425px) {
+  .card1 {
+    width: 80%;
+  }
+}
+@media (max-width: 375px) {
+  .card1 {
+    width: 70%;
+  }
+  .p-tag {
+    margin-top: 10px;
+  }
+  .p-tag span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 320px) {
+  .card1 {
+    width: 60%;
+    margin-left: 10px;
+  }
+  .p-tag {
+    margin-top: 10px;
+  }
+  .p-tag span {
+    font-size: 10px;
+  }
+  .d-grid {
+    padding: 0;
+  }
+}

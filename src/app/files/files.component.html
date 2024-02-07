@@ -1,0 +1,95 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">Files</h2>
+<div class="cards d-flex container-fluid">
+  <div class="files container d-grid w-75">
+    @for (file of files; track file) {
+    <p-card class="card1">
+      <ng-template pTemplate="header">
+        <div class="icons text-white-50">
+          <i class="m-3 pi pi-download"></i>
+        </div>
+        <div
+          class="d-flex flex-column header position-relative justify-content-center align-items-center"
+        >
+          <img class="img-fluid mb-4 friend" alt="Card" src="{{ file.pic }}" />
+          <span class="text-white">{{ file.name }} </span>
+        </div>
+      </ng-template>
+      <div
+        class="info d-flex justify-content-center flex-column align-items-start pe-1"
+      >
+        <h5 class="text-white-50">{{ file.uploaderName }}</h5>
+      </div>
+
+      <div class="foot">
+        <div class="join d-flex justify-content-between pt-3">
+          <span class="text-white-50">{{ file.date }} </span>
+          <span class="text-white-50"> {{ file.size }} MB</span>
+        </div>
+      </div>
+    </p-card>
+    }
+  </div>
+  <div class="stats card container">
+    <p-card class="card1">
+      <ng-template pTemplate="header">
+        <div class="icons p-2 text-white">
+          <h5>Files Statistics</h5>
+        </div>
+      </ng-template>
+      <div class="icon d-flex justify-content-between pe-1">
+        <div class="blue">
+          <i class="pi pi-file-pdf"></i>
+        </div>
+        <div class="info flex-column d-flex align-items-center">
+          <span class="text-white">PDF Files</span>
+          <span class="text-white-50">130</span>
+        </div>
+        <div class="space align-self-center text-white">
+          <span>6.5GB</span>
+        </div>
+      </div>
+      <div class="icon d-flex justify-content-between pe-1">
+        <div class="green">
+          <i class="pi pi-image"></i>
+        </div>
+        <div class="info flex-column d-flex align-items-center">
+          <span class="text-white">Images</span>
+          <span class="text-white-50">115</span>
+        </div>
+        <div class="space align-self-center text-white">
+          <span>3.5GB</span>
+        </div>
+      </div>
+      <div class="icon d-flex justify-content-between pe-1">
+        <div class="red">
+          <i class="pi pi-file-word"></i>
+        </div>
+        <div class="info flex-column d-flex align-items-center">
+          <span class="text-white">Word Files</span>
+          <span class="text-white-50">110</span>
+        </div>
+        <div class="space align-self-center text-white">
+          <span>3.2GB</span>
+        </div>
+      </div>
+      <div class="icon d-flex justify-content-between pe-1">
+        <div class="orange">
+          <i class="pi pi-file-excel"></i>
+        </div>
+        <div class="info flex-column d-flex align-items-center">
+          <span class="text-white">Excel Files</span>
+          <span class="text-white-50">99</span>
+        </div>
+        <div class="space align-self-center text-white">
+          <span>2.9GB</span>
+        </div>
+      </div>
+
+      <div class="foot pt-5">
+        <div class="text-center pt-3">
+          <p-button label="Upload" severity="warning"></p-button>
+        </div>
+      </div>
+    </p-card>
+  </div>
+</div>

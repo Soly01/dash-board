@@ -23,3 +23,13 @@ input {
 input::placeholder {
   color: #b8bebe;
 }
+@media (max-width: 768px) {
+  .form {
+    width: 80%;
+  }
+}
+@media (max-width: 425px) {
+  .form {
+    width: 90%;
+  }
+}

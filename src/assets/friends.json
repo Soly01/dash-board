@@ -1,0 +1,102 @@
+[
+  {
+    "img": "../assets/images/friend-01.jpg",
+    "p": "Adam Abdullah",
+    "span": "Backend Devoloper",
+    "friends": 99,
+    "date": "Joined 04/10/2022",
+    "projects": 15,
+    "articals": 25,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-02.jpg",
+    "p": "Ahmed Soliman",
+    "span": "Backend Devoloper",
+    "friends": 30,
+    "date": "Joined 02/08/2020",
+    "projects": 11,
+    "articals": 12,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-03.jpg",
+    "p": "Moaz Mohamed",
+    "span": "Frontend Developer",
+    "friends": 80,
+    "date": "Joined 02/6/2022",
+    "projects": 20,
+    "articals": 18,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-04.jpg",
+    "p": "Amr Fawzy",
+    "span": "Ui/Ux Designer",
+    "friends": 70,
+    "date": "Joined 28/06/2021",
+    "projects": 30,
+    "articals": 18,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-05.jpg",
+    "p": "Ahmed Fawzy",
+    "span": "Mobile Developer",
+    "friends": 80,
+    "date": "Joined 28/08/2022",
+    "projects": 30,
+    "articals": 18,
+    "calss": "d-none"
+  },
+  {
+    "img": "../assets/images/friend-04.jpg",
+    "p": "Mohamed Hassan",
+    "span": "Frontend Developer",
+    "friends": 70,
+    "date": "Joined 28/06/2021",
+    "projects": 30,
+    "articals": 18,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-02.jpg",
+    "p": "Naruto Uzamaki",
+    "span": "Cloud Developer",
+    "friends": 30,
+    "date": "Joined 02/08/2023",
+    "projects": 11,
+    "articals": 12,
+    "calss": "d-none"
+  },
+  {
+    "img": "../assets/images/friend-05.jpg",
+    "p": "Goku",
+    "span": "Fullstack Developer",
+    "friends": 80,
+    "date": "Joined 02/6/2022",
+    "projects": 30,
+    "articals": 18,
+    "calss": "d-none"
+  },
+  {
+    "img": "../assets/images/friend-01.jpg",
+    "p": "Vegeta",
+    "span": "JavaScript Developer",
+    "friends": 99,
+    "date": "Joined 25/05/2022",
+    "projects": 15,
+    "articals": 25,
+    "calss": "vip"
+  },
+  {
+    "img": "../assets/images/friend-03.jpg",
+    "p": "Sasuke",
+    "span": "Content Creator",
+    "friends": 80,
+    "date": "Joined 04/10/2022",
+    "projects": 20,
+    "articals": 18,
+    "calss": "d-none"
+  }
+]

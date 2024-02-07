@@ -1,0 +1,17 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">Drafts</h2>
+
+<div
+  *ngFor="let draft of drafts; let i = index"
+  class="card draft card1 w-75 justify-content-center mt-5 d-flex align-items-center"
+>
+  <div class="card-body">
+    <h5 class="card-title">Your Title: {{ draft.title }}</h5>
+    <p class="card-text">Your Comment: {{ draft.comment }}</p>
+    <p-button
+      (click)="deleteDraft(i)"
+      label="Delete"
+      [raised]="true"
+      severity="warning"
+    ></p-button>
+  </div>
+</div>

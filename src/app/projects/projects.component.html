@@ -1,0 +1,32 @@
+<h2 class="p-5 pt-2 main position-relative fw-bolder">Projects</h2>
+<div class="cards d-grid project">
+  @for (project of projects; track $index) {
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex header justify-content-between">
+        <div class="head justify-content-between d-flex">
+          <p class="h1 fs-3 fw-bold">{{ project.name }}</p>
+          <span class="date">{{ project.date }}</span>
+        </div>
+        <span class="text-white-50">{{ project.span }} </span>
+      </div>
+    </ng-template>
+    <div class="images">
+      @for (image of project.team;track $index) {
+      <img alt="Card" src="{{ image }}" />
+      }
+    </div>
+    <div class="{{ project.class }} mb-2 d-flex justify-content-end">
+      @for (tag of project.tags;track $index) {
+      <p-tag class="p-1" value="{{ tag }}" [rounded]="true"></p-tag>
+      }
+    </div>
+    <div class="d-flex pt-3 justify-content-between align-items-end">
+      <div class="card mb-2 progress">
+        <p-progressBar [value]="project.progress"></p-progressBar>
+      </div>
+      <span class="text-end date">{{ project.money }} </span>
+    </div>
+  </p-card>
+  }
+</div>

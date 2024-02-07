@@ -1,0 +1,289 @@
+* {
+  box-sizing: border-box;
+}
+.main::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 38px;
+  height: 3px;
+  bottom: 40px;
+}
+.profile {
+  width: 100%;
+}
+
+.p-card {
+  border-radius: 10px;
+  background-color: #303030 !important;
+  max-width: 100%;
+  height: 100%;
+}
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  background-color: #303030;
+  border-radius: 8px;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+.p-progressbar {
+  background-color: #3e6050;
+  height: 4px;
+}
+.p-progressbar-value {
+  background: #4caf50;
+}
+
+.p-progressbar-label {
+  color: #4caf50;
+}
+.avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  transition: 0.5s;
+}
+.avatar:hover {
+  transform: scale(1.2);
+}
+.star {
+  color: #ffd700;
+}
+.information h4 {
+  font-size: 15px;
+}
+.skills {
+  margin-left: 50px;
+  margin-top: 20px;
+  margin-right: 30px;
+}
+.p-card .header {
+  padding: 30px;
+  flex-direction: column;
+}
+.p-card .header .h1 {
+  color: white;
+}
+.skills .p-card-body {
+  margin-right: 20px;
+  width: 500px;
+}
+.p-tag {
+  font-weight: 500;
+  transition: 0.5s;
+  font-size: 15px;
+}
+.purple-tag .p-tag {
+  background-color: #7b1fa2;
+}
+.green-tag .p-tag {
+  background-color: #69f0ae;
+  color: #000;
+}
+.red-tag .p-tag {
+  background-color: #f44336;
+  color: #fff;
+}
+.mix-tag .purple .p-tag {
+  background-color: #7b1fa2;
+}
+.mix-tag .red .p-tag {
+  background-color: #f44336;
+  color: #fff;
+}
+.mix-tag .green .p-tag {
+  background-color: #69f0ae;
+  color: #000;
+}
+.mix-tag .p-tag:hover {
+  background-color: #d3d3d3;
+  color: #000;
+  font-weight: 900;
+}
+.p-tag:hover {
+  background-color: #d3d3d3;
+  color: #000;
+  font-weight: 900;
+}
+.latest-activites {
+  margin-left: 30px;
+}
+.latest-activites {
+  margin-top: 20px;
+  width: 75%;
+}
+.act1,
+.act2,
+.act3,
+.act4 {
+  transition: 0.5s;
+}
+.act1 img,
+.act2 img,
+.act3 img,
+.act4 img {
+  width: 60px;
+  transition: 0.5s;
+}
+.act1 img:hover,
+.act2 img:hover,
+.act3 img:hover,
+.act4 img:hover {
+  transform: scale(1.2);
+}
+.p-card-content .act1:hover,
+.p-card-content .act2:hover,
+.p-card-content .act3:hover,
+.p-card-content .act4:hover {
+  background-color: #d3d3d3;
+  color: #000;
+  padding: 10px;
+  border-radius: 7px;
+  font-weight: 700;
+}
+.p-card-content .act1:hover .info .word p,
+.p-card-content .act2:hover .info .word p,
+.p-card-content .act3:hover .info .word p,
+.p-card-content .act4:hover .info .word p {
+  font-size: 15;
+  font-weight: 500;
+  color: #000 !important;
+}
+.p-card-content .act1:hover .details span,
+.p-card-content .act2:hover .details span,
+.p-card-content .act3:hover .details span,
+.p-card-content .act4:hover .details span {
+  color: #000000 !important;
+}
+.p-card-content .act1:hover .details p,
+.p-card-content .act2:hover .details p,
+.p-card-content .act3:hover .details p,
+.p-card-content .act4:hover .details p {
+  color: #000000 !important;
+  font-weight: normal;
+}
+
+.p-card-content .act1:hover .info .word span,
+.p-card-content .act2:hover .info .word span,
+.p-card-content .act3:hover .info .word span,
+.p-card-content .act4:hover .info .word span {
+  color: #000000 !important;
+}
+.choose {
+  color: #ffffff;
+  background: #f97316;
+  border: 1px solid #f97316;
+}
+@media (max-width: 1024px) {
+  .cont {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  .cont .skills {
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+  }
+}
+@media (max-width: 1024px) {
+  .profile {
+    margin-left: 30px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 !important;
+    margin-right: 0;
+  }
+  .level {
+    display: flex;
+    justify-content: center;
+    width: 100% !important;
+  }
+
+  .information {
+    margin-right: 0 !important;
+  }
+  .skills {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+@media (max-width: 576px) {
+  .profile {
+    margin-left: 20px;
+  }
+  .skills {
+    align-items: center;
+  }
+  .latest-activites {
+    margin-left: 0;
+    margin-right: 0 !important;
+  }
+}
+@media (max-width: 425px) {
+  .profile {
+    width: 95%;
+    margin-left: 10px !important;
+  }
+  .card1 {
+    width: 100% !important;
+  }
+  .skills {
+    margin-left: 3px;
+    width: 70% !important;
+  }
+  .skills .p-card-body {
+    width: max-content;
+    margin-right: 0;
+  }
+  .latest-activites {
+    width: 90% !important;
+    margin-left: 4px !important;
+  }
+
+  .act1 span,
+  .act2 span,
+  .act3 span,
+  .act4 span {
+    font-size: 13px;
+  }
+}
+@media (max-width: 375px) {
+  .skills {
+    width: 90% !important;
+  }
+  .skills .p-element {
+    width: 100% !important ;
+  }
+  .skills .p-tag {
+    font-size: 11px !important;
+    text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .profile span {
+    font-size: 12px;
+  }
+  .card1 {
+    width: 100% !important;
+  }
+  .card1 span {
+    margin-left: 3px;
+    margin-right: 5px;
+  }
+  .skills {
+    width: 95% !important;
+  }
+  .latest-activites {
+    width: 95% !important;
+  }
+  .skills .p-card-body {
+    width: 100%;
+    margin-right: 0;
+  }
+}

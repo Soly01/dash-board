@@ -1,0 +1,329 @@
+<div class="setting container-fluid d-grid">
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Site Control</p>
+        <span>control the website if there is a maintenance </span>
+      </div>
+    </ng-template>
+    <div class="container position-relative">
+      <div class="box">
+        <div class="d-flex justify-content-between">
+          <p class="fs-6 mb-4 text text-white">Web Site Control</p>
+          <p-inputSwitch [(ngModel)]="checked"></p-inputSwitch>
+        </div>
+        <span class="pb-5">Open/Close Website And Type The Reason </span>
+      </div>
+    </div>
+    <div class="card mt-4 flex justify-content-center">
+      <textarea
+        class="textarea"
+        placeholder="Leave a Comment"
+        rows="7"
+        cols="30"
+        pInputTextarea
+        [(ngModel)]="value"
+      ></textarea>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">General Info</p>
+        <span class="text-white-50"
+          >General Information About Your Account
+        </span>
+      </div>
+    </ng-template>
+    <div
+      class="float-container flex align-items-center justify-content-center flex-wrap gap-3"
+    >
+      <div [formGroup]="updateName">
+        <span class="p-float-label p-2">
+          <input
+            formControlName="username"
+            id="float-input-username"
+            type="text"
+            size="50"
+            pInputText
+          />
+          <label for="float-input-username text-white-50">First Name</label>
+        </span>
+
+        <span class="p-float-label p-2">
+          <input
+            formControlName="email"
+            id="float-input-email"
+            type="text"
+            size="50"
+            pInputText
+          />
+          <label for="float-input-email text-white-50">Email</label>
+        </span>
+      </div>
+    </div>
+    <ng-template pTemplate="footer">
+      <button
+        type="button"
+        pButton
+        pRipple
+        (click)="changed()"
+        label="Change"
+        class="p-button-warning"
+      ></button>
+    </ng-template>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Security Info</p>
+        <span class="text-white-50"
+          >Security Information About Your Account
+        </span>
+      </div>
+    </ng-template>
+    <div class="container mt-5 position-relative">
+      <div class="box d-flex justify-content-between">
+        <p class="text-white">Password</p>
+        <div class="card flex justify-content-center">
+          <p-button
+            severity="warning"
+            (click)="showDialog()"
+            label="Change"
+          ></p-button>
+          <p-dialog
+            header="Header"
+            [(visible)]="visible"
+            [modal]="true"
+            [style]="{ width: '50rem' }"
+            [breakpoints]="{ '1199px': '75vw', '575px': '90vw' }"
+          >
+            <ng-template pTemplate="header">
+              <div
+                class="inline-flex align-items-center justify-content-center gap-2"
+              >
+                <h1 class="font-bold text-white white-space-nowrap">
+                  Change Password
+                </h1>
+              </div>
+            </ng-template>
+            <div
+              [formGroup]="updateName"
+              class="float-container flex align-items-center justify-content-center flex-wrap gap-3"
+            >
+              <div>
+                <span class="p-float-label p-2">
+                  <input
+                    formControlName="password"
+                    id="float-input-password"
+                    type="password"
+                    size="50"
+                    pInputText
+                  />
+
+                  <label for="float-input-password text-white-50"
+                    >Password</label
+                  >
+                </span>
+
+                <span class="p-float-label p-2">
+                  <input
+                    formControlName="confirmPassword"
+                    id="float-input-confirmPassword"
+                    type="password"
+                    size="50"
+                    pInputText
+                  />
+
+                  <label for="float-input-confirmPassword text-white-50"
+                    >Confirm Password</label
+                  >
+                </span>
+              </div>
+            </div>
+            <ng-template pTemplate="footer">
+              <div class="card check flex justify-content-center">
+                <p-confirmDialog #cd>
+                  <ng-template pTemplate="headless" let-message>
+                    <div
+                      class="flex flex-column alert align-items-center p-5 surface-overlay border-round"
+                    >
+                      <span
+                        class="font-bold text-2xl text-center block text-white mb-2 mt-4"
+                        >{{ message.header }}</span
+                      >
+                      <p class="mb-0">{{ message.message }}</p>
+                      <div class="flex align-items-center gap-2 mt-4">
+                        <p-button
+                          (click)="cd.accept()"
+                          label="Save"
+                          severity="warning"
+                          class="me-1"
+                        ></p-button>
+
+                        <p-button
+                          class="w-8rem"
+                          (click)="cd.reject()"
+                          label="Cancel"
+                          [outlined]="true"
+                          severity="warning"
+                        ></p-button>
+                      </div>
+                    </div>
+                  </ng-template>
+                </p-confirmDialog>
+                <p-button
+                  (click)="confirm()"
+                  icon="pi pi-check"
+                  label="Confirm"
+                  severity="warning"
+                ></p-button>
+              </div>
+            </ng-template>
+          </p-dialog>
+        </div>
+      </div>
+      <div class="pb-3">
+        <span class="text-white-50">Last Change On 25/5/2021 </span>
+      </div>
+      <div class="box fw-bolder d-flex justify-content-between">
+        <p class="text-white">Two-Factor Authentication</p>
+        <p-inputSwitch [(ngModel)]="ischecked"></p-inputSwitch>
+      </div>
+      <div class="pb-3">
+        <span class="mb-3 text-white-50">Enable/Disable This Feature </span>
+      </div>
+      <div class="box fw-bolder d-flex justify-content-between">
+        <p class="text-white">Devices</p>
+        <p-button label="Devices" [raised]="true" severity="warning"></p-button>
+      </div>
+      <div class="div">
+        <span class="mb-5 text-white-50">Check The Login Devices List </span>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Social Media</p>
+        <span class="text-white-50">Social Media Information </span>
+      </div>
+    </ng-template>
+    <div class="container mt-5 position-relative">
+      <div
+        class="float-container social flex align-items-center justify-content-center flex-wrap gap-3"
+      >
+        <span class="p-float-label twitter p-2">
+          <input id="float-input-twitter" type="text" size="50" pInputText />
+          <i class="pi pi-twitter"></i>
+        </span>
+        <span class="p-float-label facebook p-2">
+          <input id="float-input-facebook" type="text" size="50" pInputText />
+          <i class="pi pi-facebook"></i>
+        </span>
+        <span class="p-float-label youtube p-2">
+          <input id="float-input-youtube" type="text" size="50" pInputText />
+          <i class="pi pi-youtube"></i>
+        </span>
+        <span class="p-float-label-linkedin linkedin p-2">
+          <input id="float-input" type="text" size="50" pInputText />
+          <i class="pi pi-linkedin"></i>
+        </span>
+      </div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Widget Control</p>
+        <span class="text-white-50">Show/Hide Widgets </span>
+      </div>
+    </ng-template>
+    <div class="container mt-5 position-relative">
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="check"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+
+        <p class="fs-5 mt-3 ms-2 text-white">Quick Draft</p>
+      </Div>
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="checkk"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <p class="fs-5 mt-3 ms-2 text-white">Yearly Targets</p>
+      </Div>
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="checkkk"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <p class="fs-5 mt-3 ms-2 text-white">Tickets Statistics</p>
+      </Div>
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="checkkkk"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <p class="fs-5 mt-3 ms-2 text-white">Latest News</p>
+      </Div>
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="checkkkkk"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <p class="fs-5 mt-3 ms-2 text-white">Latest Tasks</p>
+      </Div>
+      <Div class="box d-flex">
+        <p-checkbox
+          [(ngModel)]="checkkkkkk"
+          [binary]="true"
+          inputId="binary"
+        ></p-checkbox>
+        <p class="fs-5 mt-3 ms-2 text-white">Top Search Item</p>
+      </Div>
+    </div>
+  </p-card>
+  <p-card class="card1">
+    <ng-template pTemplate="header">
+      <div class="d-flex flex-wrap text-white draft justify-content-between">
+        <p class="h1 w-100 fs-3 fw-bolder">Backup Manager</p>
+        <span class="text-white-50">Control Backup Time And Location </span>
+      </div>
+    </ng-template>
+    <div class="container mt-5 position-relative">
+      <form class="flex flex-column gap-3" [formGroup]="formGroup">
+        <div *ngFor="let category of categories" class="field-checkbox">
+          <p-radioButton
+            [inputId]="category.key"
+            [value]="category"
+            formControlName="selectedCategory"
+          ></p-radioButton>
+          <label [for]="category.key" class="ml-2">{{ category.name }}</label>
+        </div>
+      </form>
+      <div class="text-white d-flex justify-content-evenly flex-wrap mt-5">
+        <div class="icons text-center">
+          <i class="w-100 pi pi-align-justify"></i>
+          <span class="w-100">Daily</span>
+        </div>
+        <div class="icons text-center">
+          <i class="w-100 pi pi-align-justify"></i>
+          <span class="flex-column">Weekly</span>
+        </div>
+        <div class="icons text-center">
+          <i class="w-100 pi pi-align-justify"></i>
+          <span class="flex-column">Monthly</span>
+        </div>
+      </div>
+      <div class="text-white d-flex justify-content-evenly fs-3 mt-5"></div>
+    </div>
+  </p-card>
+</div>

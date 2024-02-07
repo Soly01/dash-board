@@ -1,0 +1,118 @@
+.main::before {
+  content: "";
+  position: absolute;
+  background-color: #000;
+  width: 38px;
+  height: 3px;
+  bottom: 40px;
+}
+.d-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  height: fit-content;
+}
+.files {
+  margin: auto;
+  max-width: 90%;
+}
+.cards .p-card {
+  border-radius: 10px;
+  background-color: #303030 !important;
+  max-width: 100%;
+  height: 100%;
+}
+.card1 {
+  transition: 0.5s;
+  box-shadow: 0 0 10px #7e5e0d;
+  background-color: #303030 !important;
+  border-radius: 8px;
+}
+.card1:hover {
+  box-shadow: 0 0 30px #f8b201;
+}
+.free {
+  transition: 0.5s;
+  background-color: #22c55e;
+  height: 150px;
+  padding: 10px 15px;
+  border: 3px solid white;
+  outline: 3px solid #22c55e;
+}
+.basic {
+  transition: 0.5s;
+  background-color: #0075ff;
+  height: 150px;
+  padding: 10px 15px;
+  border: 3px solid white;
+  outline: 3px solid #0075ff;
+}
+.premium {
+  transition: 0.5s;
+  background-color: #f59e0b;
+  height: 150px;
+  padding: 10px 15px;
+  border: 3px solid white;
+  outline: 3px solid #f59e0b;
+}
+.icon-info {
+  -bs-text-opacity: 1;
+  color: #ffffff80 !important;
+}
+.p-card:hover .header {
+  background-color: #d3d3d3;
+  color: #000 !important;
+  padding: 5px;
+  border-radius: 7px;
+  font-weight: 700;
+}
+.p-card:hover .header span {
+  color: #000 !important;
+}
+.box {
+  transition: 0.5s;
+}
+.p-card:hover .box .icon-info {
+  color: #000 !important;
+}
+.p-card:hover .box {
+  background-color: #d3d3d3;
+  color: #000 !important;
+  padding: 5px;
+  border-radius: 7px;
+  font-weight: 700;
+}
+.p-card .box span {
+  margin-left: 5px;
+}
+.p-card .box .icon-check i {
+  padding: 10px;
+}
+.p-card .box .icon-times i {
+  padding: 10px;
+}
+.p-card:hover .box span {
+  color: #000 !important;
+  font-weight: 500;
+}
+.p-card:hover .box .icon-check i {
+  align-items: center;
+  box-shadow: 0 0 5px #22c55e;
+  color: #22c55e !important;
+}
+.p-card:hover .box .icon-times i {
+  align-items: center;
+  box-shadow: 0 0 5px red;
+  color: red !important;
+}
+
+.p-card:hover .p-button {
+  color: #000;
+}
+@media (max-width: 1024px) {
+  .cards {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+}

@@ -1,0 +1,47 @@
+<div class="sidebar">
+  <p-sidebar [(visible)]="sidebarService.sidebarVisible1" position="left">
+    <div class="name position-relative">
+      <h3 class="text-center">Ahmed</h3>
+      <span class="ball position-absolute"></span>
+    </div>
+    <div
+      class="sidebar mt-5 d-flex text-center justify-content-between flex-column"
+    >
+      <div routerLinkActive="isactive" class="dashboards mb-2 pb-3 p-2">
+        <i class="pi pi-home"></i>
+        <a routerLinkActive="color" routerLink="home">Dash Board</a>
+      </div>
+      <div
+        routerLinkActive="isactive"
+        class="setiings m-auto pb-3 p-3 me-0 ms-0"
+      >
+        <i class="pi pi-cog"></i>
+        <a routerLinkActive="color" routerLink="settings">Settings</a>
+      </div>
+      <div routerLinkActive="isactive" class="profiles m-auto pb-3 p-2">
+        <i class="pi pi-user"></i>
+        <a routerLinkActive="color" routerLink="profile">Profile</a>
+      </div>
+      <div routerLinkActive="isactive" class="projects m-auto pb-3 p-3">
+        <i class="pi pi-share-alt"></i>
+        <a routerLinkActive="color" routerLink="projects">Projects</a>
+      </div>
+      <div routerLinkActive="isactive" class="courses m-auto pb-3 p-3">
+        <i class="pi pi-cloud"></i>
+        <a routerLinkActive="color" routerLink="courses">Courses</a>
+      </div>
+      <div routerLinkActive="isactive" class="friends m-auto pb-3 p-3">
+        <i class="pi pi-user-plus"></i>
+        <a routerLinkActive="color" routerLink="friends">Friends</a>
+      </div>
+      <div routerLinkActive="isactive" class="files m-auto pb-3 p-3">
+        <i class="pi pi-file"></i>
+        <a routerLinkActive="color" routerLink="files">Files</a>
+      </div>
+      <div routerLinkActive="isactive" class="plans m-auto pb-3 p-3">
+        <i class="pi pi-credit-card"></i>
+        <a routerLinkActive="color" routerLink="plans">Plans</a>
+      </div>
+    </div>
+  </p-sidebar>
+</div>
