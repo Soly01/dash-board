@@ -1,0 +1,31 @@
+<div
+  class="form d-flex justify-content-center flex-column align-items-center position-absolute"
+  [formGroup]="login"
+>
+  <h1 class="login fw-bold fs-4">Login</h1>
+  <div class="p-3">
+    <input type="text" formControlName="username" placeholder="Username" />
+    <input
+      type="password"
+      formControlName="password"
+      placeholder="Enter Your Password"
+    />
+  </div>
+  <button
+    pButton
+    pRipple
+    (click)="loginPost()"
+    [disabled]="!login.valid"
+    label="Login"
+    class="p-button-success mt-3 w-75 p-3"
+  ></button>
+
+  <h1 class="mt-5 fs-4">Register New Account</h1>
+  <button
+    pButton
+    pRipple
+    (click)="registerRoute()"
+    label="Register"
+    class="p-button-danger mt-3 w-75 p-3"
+  ></button>
+</div>

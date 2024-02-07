@@ -1,0 +1,25 @@
+.form {
+  background-color: #424242;
+  top: 50%;
+  left: 50%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 10px;
+}
+h1 {
+  color: white;
+}
+.login {
+  position: absolute;
+  top: 10px;
+}
+input {
+  margin-top: 10px;
+  width: 100%;
+  background-color: #424242;
+  padding: 10px;
+  border-radius: 5px;
+}
+input::placeholder {
+  color: #b8bebe;
+}
